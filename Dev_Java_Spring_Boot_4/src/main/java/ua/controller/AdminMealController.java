@@ -36,8 +36,8 @@ public class AdminMealController {
 	
 	@GetMapping
 	public String show(Model model, @PageableDefault Pageable pageable) {
-		model.addAttribute("ingredients", service.findAllIngredients());
-		model.addAttribute("cuisines", service.findAllCuisines());
+		model.addAttribute("ingredients", service.findAllIngredients(pageable));
+		model.addAttribute("cuisines", service.findAllCuisines(pageable));
 		model.addAttribute("meals", service.findAllViews(pageable));
 		return "meal";
 	}

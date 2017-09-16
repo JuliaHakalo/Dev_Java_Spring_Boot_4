@@ -8,6 +8,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import ua.entity.Cuisine;
+import ua.entity.Ingredient;
 import ua.entity.Meal;
 import ua.model.request.MealRequest;
 import ua.model.view.MealView;
@@ -88,5 +90,15 @@ public class MealServiceImpl implements MealService{
 	@Override
 	public Page<Meal> findAllViews(Pageable pageable) {
 		return repository.findAll(pageable);
+	}
+
+	@Override
+	public Page<Meal> findAllCuisines(Pageable pageable) {
+		return repository.findAllCuisines(pageable);
+	}
+
+	@Override
+	public Page<Meal> findAllIngredients(Pageable pageable) {
+		return repository.findAllIngredients(pageable);
 	}
 }

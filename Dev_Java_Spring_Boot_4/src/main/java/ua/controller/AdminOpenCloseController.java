@@ -4,6 +4,8 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,8 +28,8 @@ public class AdminOpenCloseController {
 		this.service = service;
 	}
 	@GetMapping
-	public String show(Model model) {
-		model.addAttribute("opencloses", service.findAll());
+	public String show(Model model, @PageableDefault Pageable pageable) {
+		model.addAttribute("opencloses", service.findAll(pageable));
 		return "openclose";
 	}
 	
@@ -38,7 +40,7 @@ public class AdminOpenCloseController {
 	}
 	
 	@PostMapping
-	public String save(@RequestParam String time) {
+	public String save(@RequestParam String time, @PageableDefault Pageable pageable) {
 		final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
 		//String[] times = time.split(" ");
 		 LocalTime dt = LocalTime.parse(time, dtf);

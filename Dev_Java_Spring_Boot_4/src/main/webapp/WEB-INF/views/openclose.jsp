@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="custom" uri="/WEB-INF/tags/implicit.tld"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +35,8 @@
 						<th class="text-center">Time:</th>
 						<th class="text-center">Options:</th>
 					</tr>
-					<c:forEach var="cuisine" items="${opencloses}">
+				
+					<c:forEach var="openclose" items="${opencloses.context}">
 						<tr>
 							<td>${openclose.name}</td>
 							<td class="text-center">
@@ -42,10 +44,15 @@
 								<a href="/admin/openclose/delete/${openclose.id}" class="btn btn-outline-danger btn-sm">Delete</a>
 							</td>
 						</tr>
-					</c:forEach>
+							</c:forEach>
 				</table>
 			</div>
 		</div>
+		<div class="row">
+				<div class="col-12 text-center">
+					<custom:pageable page="${opencloses}"/>
+				</div>
+			</div>
 	</div>
 </body>
 </html>
