@@ -2,6 +2,8 @@ package ua.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,13 +35,13 @@ public class CafeController {
 	}
 	
 	@GetMapping
-	public String show(Model model) {
+	public String show(Model model,@PageableDefault Pageable pageable) {
 		model.addAttribute("cafes", service.findAllIndexViews());
 		return "cafe_index_view";
 	}
 	
 	@GetMapping("/{id}")
-	public String show(@PathVariable Integer id, Model model){
+	public String show(@PathVariable Integer id, Model model, @PageableDefault Pageable pageable){
 		model.addAttribute("cafe", service.findOne(id));
 		return "cafe_view";
 	}
@@ -57,9 +59,9 @@ public class CafeController {
 	}
 	
 	@GetMapping("/update/{id}")
-	public String update(@PathVariable Integer id, Model model) {
+	public String update(@PathVariable Integer id, Model model, @PageableDefault Pageable pageable) {
 		model.addAttribute("cafe", service.findOne(id));
-		return show(model);
+		return show(model, pageable);
 	}
 	
 	@GetMapping("/cancel")

@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="custom" uri="/WEB-INF/tags/implicit.tld"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,6 +52,11 @@
 				</table>
 			</div>
 		</div>
+		<div class="row">
+				<div class="col-12 text-center">
+					<custom:pageable page="${comments}"/>
+				</div>
+			</div>
 	</div>
 </body>
 </html>
