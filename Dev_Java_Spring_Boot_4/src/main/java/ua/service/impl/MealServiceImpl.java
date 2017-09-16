@@ -3,6 +3,8 @@ package ua.service.impl;
 import java.math.BigDecimal;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +17,8 @@ import ua.service.MealService;
 @Service
 public class MealServiceImpl implements MealService{
 
+	
+	
 	private final MealRepository repository;
 
 	public MealServiceImpl(MealRepository repository) {
@@ -77,5 +81,12 @@ public class MealServiceImpl implements MealService{
 		request.setVersion(meal.getVersion());
 		request.setWeight(String.valueOf(meal.getWeight()));
 		return request;
+	}
+
+
+
+	@Override
+	public Page<Meal> findAllViews(Pageable pageable) {
+		return repository.findAll(pageable);
 	}
 }

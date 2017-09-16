@@ -70,7 +70,7 @@
 						<th class="text-center">Ingredients</th>
 						<th class="text-center">Options</th>
 					</tr>
-					<c:forEach var="meal" items="${meals}">
+					<c:forEach var="meal" items="${meals.content}">
 						<tr>
 							<td>${meal.title}</td>
 							<td>${meal.description}</td>

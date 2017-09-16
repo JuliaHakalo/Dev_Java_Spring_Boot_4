@@ -2,6 +2,10 @@ package ua.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import ua.entity.Meal;
 import ua.model.request.MealRequest;
 import ua.model.view.MealView;
 
@@ -18,4 +22,6 @@ public interface MealService {
 	MealRequest findOne(Integer id);
 	
 	void delete(Integer id);
+
+	Page<Meal> findAllViews(Pageable pageable);
 }
