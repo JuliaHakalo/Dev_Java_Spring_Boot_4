@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,15 +56,24 @@
 </div>
         </li>
     </ul>
-      <div >
+     <div >
             <ul class="navbar-nav">
+            	<sec:authorize access="isAnonymous()">
             <li class="nav-item active">
-        <a class="nav-link; btn btn-outline-info " href="#">Sign in <span class="sr-only">(current)</span></a>
+        <a class="nav-link; btn btn-outline-info " href="/registration"><span class="glyphicon glyphicon-user" ></span>Sign Up <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link; btn btn-outline-primary" href="#">Sign up</a>
-            
-            
+        <a class="nav-link; btn btn-outline-primary" href="/login"><span class="glyphicon glyphicon-log-in" ></span> Sign In</a>
+        </li>
+            	</sec:authorize>
+            	
+	<sec:authorize access="isAuthenticated()">
+		<form:form action="/logout">
+			<button class="btn btn-outline-primary">Log Out</button>
+		</form:form>
+	</sec:authorize>
+            	
+
             </ul>
         </div>
       
@@ -79,12 +90,24 @@
     <span class="navbar-toggler-icon"></span>
   </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown1">
+        
             <ul class="navbar-nav">
+            	<sec:authorize access="isAnonymous()">
             <li class="nav-item active">
-        <a class="nav-link; btn btn-outline-info " href="#">Sign in <span class="sr-only">(current)</span></a>
+        <a class="nav-link; btn btn-outline-info " href="/registration"><span class="glyphicon glyphicon-user" ></span>Sign Up <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link; btn btn-outline-primary" href="#">Sign up</a>
+        <a class="nav-link; btn btn-outline-primary" href="/login"><span class="glyphicon glyphicon-log-in" ></span> Sign In</a>
+        </li>
+            	</sec:authorize>
+            	
+	<sec:authorize access="isAuthenticated()">
+		<form:form action="/logout">
+			<button class="btn btn-outline-primary">Log Out</button>
+		</form:form>
+	</sec:authorize>
+            	
+
             </ul>
         </div>
 </nav>

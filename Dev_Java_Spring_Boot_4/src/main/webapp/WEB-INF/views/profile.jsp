@@ -74,11 +74,14 @@
         <a class="nav-link; btn btn-outline-primary" href="/login"><span class="glyphicon glyphicon-log-in" ></span> Sign In</a>
         </li>
             	</sec:authorize>
-              <sec:authorize access="isAuthenticated()">
-                  <li class="nav-item">
-        <a class="nav-link; btn btn-outline-primary" href="/logout"><span class="glyphicon glyphicon-log-in" ></span> Log Out</a>
-            </li>
-            </sec:authorize>
+            	
+	<sec:authorize access="isAuthenticated()">
+		<form:form action="/logout">
+			<button class="btn btn-outline-primary">Log Out</button>
+		</form:form>
+	</sec:authorize>
+            	
+
             </ul>
         </div>
       
@@ -111,10 +114,10 @@
         </li>
             	</sec:authorize>
               <sec:authorize access="isAuthenticated()">
-                  <li class="nav-item">
-        <a class="nav-link; btn btn-outline-primary" href="/logout"><span class="glyphicon glyphicon-log-in" ></span> Log Out</a>
-            </li>
-            </sec:authorize>
+		<form:form action="/logout">
+			<button class="btn btn-outline-primary">Log Out</button>
+		</form:form>
+	</sec:authorize>
             </ul>
         </div>
 </nav>
