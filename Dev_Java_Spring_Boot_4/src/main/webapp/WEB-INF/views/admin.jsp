@@ -4,88 +4,94 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/lib/bootstrap.min.css">
-  <script src="/lib/jquery-1.12.2.min.js"></script>
-  <script src="/lib/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-  <style>
-      
-          .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-	  
-    }
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1500px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #343434;
-      height: 100%;
-    }
-      .comment{
-           background-color: #cae898;
-      height: 100%;
-      }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;
-        } 
-    }
-  </style>
+    </head>
+    <style>
+        body{
+            background-image: url("http://www.nmgncp.com/data/out/75/4170503-color-gradient-wallpaper-hd.png");
+            background-size: 100%;
+        }
+    </style>
 
 <title>Admin</title>
 </head>
 <body>
 
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-	<button type="button" class="navbar-toggle"  data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-	
-      <a class="navbar-brand"  href="#" style="color:#cae898; font-style: italic; font-weight: bold;  font-size: 1.875em;">Lviv_Rest</a>
-    </div>
-	 <div class="collapse navbar-collapse" id="myNavbar">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Show All Cafes</a></li>
-      <li><a href="#">1</a></li> 
-      <li><a href="#">2</a></li> 
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#" style="color:#cae898"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-          <li><a href="#" style="color:#cae898"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-dark">
+  <a class="navbar-brand; btn btn-dark" style = "font-style: italic; font-weight: bold;  font-size: 1.875em;" href="#">LvivRest</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link; btn btn-outline-info " href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link; btn btn-outline-primary" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link; btn btn-outline-success" href="#">Pricing</a>
+      </li>
+    
+        <li class="nav-item dropdown">
+        <!-- Example single danger button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
   </div>
+</div>
+        </li>
+    </ul>
+      <div >
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+        <a class="nav-link; btn btn-outline-info " href="#">Sign in <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link; btn btn-outline-primary" href="#">Sign up</a>
+            
+            
+            </ul>
+        </div>
+      
+      
   </div>
+        
 </nav>
+    
+   
+    
+    <nav class="navbar navbar-expand-lg fixed-bottom navbar-light bg-dark">
+  <a class="navbar-brand; btn btn-dark" style = "font-style: italic; font-weight: bold;  font-size: 1.875em;" href="#">LvivRest</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown1" aria-controls="navbarNavDropdown1" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown1">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+        <a class="nav-link; btn btn-outline-info " href="#">Sign in <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link; btn btn-outline-primary" href="#">Sign up</a>
+            </ul>
+        </div>
+</nav>
+ 
+
+
+
      
     
 
@@ -95,7 +101,7 @@
       </div>
     <div class="col-sm-4">
 
-        <h2 style="color:#cae898; font-style: italic; font-weight: bold;  font-size: 1.875em;">Admin</h2>
+        <h2 style="color:black; font-style: italic; font-weight: bold;  font-size: 1.875em;">Admin</h2>
 
 	
 	<a href="/admin/cuisine" class="btn btn-success btn-lg">Cuisine</a>
@@ -111,10 +117,6 @@
 
   </div>
 </div>
-
-<footer class="container-fluid">
-  <p>Footer Text</p>
-</footer>
 
 
 </body>
