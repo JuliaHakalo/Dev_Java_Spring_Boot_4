@@ -25,4 +25,9 @@ public class MainController {
 	public String admin() {
 		return "admin";
 	}
+	
+	@GetMapping("/owner")
+	public String owner() {
+		return "profile";
+	}
 }

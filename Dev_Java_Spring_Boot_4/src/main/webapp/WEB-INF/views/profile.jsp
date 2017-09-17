@@ -22,7 +22,7 @@
 <body>
  
     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-dark">
-  <a class="navbar-brand; btn btn-dark" style = "font-style: italic; font-weight: bold;  font-size: 1.875em;" href="#">LvivRest</a>
+  <a class="navbar-brand; btn btn-dark" style = "font-style: italic; font-weight: bold;  font-size: 1.875em;" href="/">LvivRest</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -34,20 +34,14 @@
         <a class="nav-link; btn btn-outline-info " href="/admin">Admin <span class="sr-only">(current)</span></a>
          </li>
         	</sec:authorize>
-        	
-        	 <sec:authorize access="hasRole('ROLE_CAFE')">
-      <li class="nav-item active">
-        <a class="nav-link; btn btn-outline-info " href="/owner">Profile <span class="sr-only">(current)</span></a>
-         </li>
-        	</sec:authorize>
-        	
-        	
-     
       <li class="nav-item">
         <a class="nav-link; btn btn-outline-primary" href="/cafe">Show All Cafes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link; btn btn-outline-success" href="/meal">Show All Meals</a>
+        <a class="nav-link; btn btn-outline-success" href="#">Show My Cafe</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link; btn btn-outline-success" href="#">Update My Cafe</a>
       </li>
     
         <li class="nav-item dropdown">
@@ -124,40 +118,7 @@
             </ul>
         </div>
 </nav>
-   <div class="container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100 img-fluid" src="http://s.gvult.com/uploads/posts/2016-02/1454579129_12646969_1240982332595940_2366665344260414621_n.png" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100 img-fluid" src="http://www.sushiya.ua/modules/pages/files/f56964590e22eed969b3651d41797252.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100 img-fluid" src="https://cdn.doordash.com/media/restaurant/cover/ChicagoPizzaPizzeria_Allen_TX.png" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-   </div>
-    
-    <div class="d-flex  justify-content-center flex-row">
-  <div class="p-2">Flex item 1</div>
-  <div class="p-2">Flex item 2</div>
-  <div class="p-2">Flex item 3</div>
-</div>
+
     
 
 
