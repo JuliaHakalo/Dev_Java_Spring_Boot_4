@@ -7,8 +7,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import ua.entity.Cuisine;
-import ua.entity.Ingredient;
 import ua.entity.Meal;
 import ua.model.view.MealView;
 

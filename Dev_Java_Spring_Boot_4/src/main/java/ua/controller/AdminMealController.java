@@ -35,10 +35,10 @@ public class AdminMealController {
 	}
 	
 	@GetMapping
-	public String show(Model model, @PageableDefault Pageable pageable) {
-		model.addAttribute("ingredients", service.findAllIngredients(pageable));
-		model.addAttribute("cuisines", service.findAllCuisines(pageable));
-		model.addAttribute("meals", service.findAllViews(pageable));
+	public String show(Model model) {
+		model.addAttribute("ingredients", service.findAllIngredients());
+		model.addAttribute("cuisines", service.findAllCuisines());
+		model.addAttribute("meals", service.findAllViews());
 		return "meal";
 	}
 	
@@ -49,15 +49,15 @@ public class AdminMealController {
 	}
 	
 	@PostMapping
-	public String save(@ModelAttribute("meal") MealRequest request, SessionStatus status, @PageableDefault Pageable pageable) {
+	public String save(@ModelAttribute("meal") MealRequest request, SessionStatus status) {
 		service.save(request);
 		return cancel(status);
 	}
 	
 	@GetMapping("/update/{id}")
-	public String update(@PathVariable Integer id, Model model, @PageableDefault Pageable pageable) {
+	public String update(@PathVariable Integer id, Model model) {
 		model.addAttribute("meal", service.findOne(id));
-		return show(model, pageable);
+		return show(model);
 	}
 	
 	@GetMapping("/cancel")

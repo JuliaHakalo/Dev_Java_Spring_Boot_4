@@ -28,8 +28,8 @@ public class AdminOpenCloseController {
 		this.service = service;
 	}
 	@GetMapping
-	public String show(Model model, @PageableDefault Pageable pageable) {
-		model.addAttribute("opencloses", service.findAll(pageable));
+	public String show(Model model) {
+		model.addAttribute("opencloses", service.findAll());
 		return "openclose";
 	}
 	
@@ -40,7 +40,7 @@ public class AdminOpenCloseController {
 	}
 	
 	@PostMapping
-	public String save(@RequestParam String time, @PageableDefault Pageable pageable) {
+	public String save(@RequestParam String time) {
 		final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
 		//String[] times = time.split(" ");
 		 LocalTime dt = LocalTime.parse(time, dtf);

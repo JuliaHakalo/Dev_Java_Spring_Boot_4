@@ -35,13 +35,13 @@ public class CafeController {
 	}
 	
 	@GetMapping
-	public String show(Model model,@PageableDefault Pageable pageable) {
+	public String show(Model model) {
 		model.addAttribute("cafes", service.findAllIndexViews());
 		return "cafe_index_view";
 	}
 	
 	@GetMapping("/{id}")
-	public String show(@PathVariable Integer id, Model model, @PageableDefault Pageable pageable){
+	public String show(@PathVariable Integer id, Model model){
 		model.addAttribute("cafe", service.findOne(id));
 		return "cafe_view";
 	}
@@ -59,9 +59,9 @@ public class CafeController {
 	}
 	
 	@GetMapping("/update/{id}")
-	public String update(@PathVariable Integer id, Model model, @PageableDefault Pageable pageable) {
+	public String update(@PathVariable Integer id, Model model) {
 		model.addAttribute("cafe", service.findOne(id));
-		return show(model, pageable);
+		return show(model);
 	}
 	
 	@GetMapping("/cancel")

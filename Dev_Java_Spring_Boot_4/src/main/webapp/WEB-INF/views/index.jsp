@@ -7,150 +7,151 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/lib/bootstrap.min.css">
-  <script src="/lib/jquery-1.12.2.min.js"></script>
-  <script src="/lib/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-  <style>
-      
-          .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-	  
-    }
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-     .row.content {height: 1200px;
-	      background-color: #cae898;
-	
-	
-	}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #343434;
-      height: 100%;
-    }
-      .comment{
-           background-color: #cae898;
-      height: 100%;
-      }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;
-        } 
-    }
-  </style>
-
 <title>Cafe</title>
 </head>
+ <style>
+        body{
+            background-image: url("http://www.nmgncp.com/data/out/75/4170503-color-gradient-wallpaper-hd.png");
+            background-size: 100%;
+        }
+    </style>
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-	<button type="button" class="navbar-toggle"  data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-	
-      <a class="navbar-brand"  href="#" style="color:#cae898; font-style: italic; font-weight: bold;  font-size: 1.875em;">LvivRest</a>
-    </div>
-	 <div class="collapse navbar-collapse" id="myNavbar">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="/cafe">Show All Cafes</a></li>
-      <li><a href="#">ЩЕ НЕ ПРИДУМАЛА</a></li> 
-      <li><a href="#">і тут теж:(</a></li> 
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
+ 
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-dark">
+  <a class="navbar-brand; btn btn-dark" style = "font-style: italic; font-weight: bold;  font-size: 1.875em;" href="#">LvivRest</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
     
-	<sec:authorize access="isAnonymous()">
- <li><a href="/registration"" style="color:#cae898;"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
-      <li><a href="/login" style="color:#cae898;"><span class="glyphicon glyphicon-log-in" ></span> Sign In</a></li>
-	</sec:authorize>
-     <sec:authorize access="isAuthenticated()">
-       <li><a href="/logout" style="color:#cae898;"><span class="glyphicon glyphicon-log-in" ></span> Log Out</a></li>
-       	</sec:authorize>
+    <sec:authorize access="hasRole('ROLE_ADMIN')">
+      <li class="nav-item active">
+        <a class="nav-link; btn btn-outline-info " href="/admin">Admin <span class="sr-only">(current)</span></a>
+         </li>
+        	</sec:authorize>
+     
+      <li class="nav-item">
+        <a class="nav-link; btn btn-outline-primary" href="/cafe">Show All Cafes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link; btn btn-outline-success" href="/meal">Show All Meals</a>
+      </li>
+    
+        <li class="nav-item dropdown">
+        <!-- Example single danger button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+        </li>
     </ul>
+    
+    
+    
+    
+      <div >
+            <ul class="navbar-nav">
+            	<sec:authorize access="isAnonymous()">
+            <li class="nav-item active">
+        <a class="nav-link; btn btn-outline-info " href="/registration"><span class="glyphicon glyphicon-user" ></span>Sign Up <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link; btn btn-outline-primary" href="/login"><span class="glyphicon glyphicon-log-in" ></span> Sign In</a>
+        </li>
+            	</sec:authorize>
+              <sec:authorize access="isAuthenticated()">
+                  <li class="nav-item">
+        <a class="nav-link; btn btn-outline-primary" href="/logout"><span class="glyphicon glyphicon-log-in" ></span> Log Out</a>
+            </li>
+            </sec:authorize>
+            </ul>
+        </div>
+      
+      
   </div>
-  </div>
+        
 </nav>
-  
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p>
-      	
-	<sec:authorize access="hasRole('ROLE_ADMIN')">
-		<a href="/admin" class="btn btn-primary btn-lg" style="margin-top:30px;">Admin</a>
-	</sec:authorize>
-      
-      
-      </p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-    </div>
-    <div class="col-sm-8 text-left"> 
-	
-<h1 style="text-align:center; font-weight:bold;font-style: italic;">${message}</h1>
-
-
-	<sec:authorize access="isAnonymous()">
-		<a href="/registration">Registration</a>
-		<a href="/login">Login</a>
-	</sec:authorize>
-	
-	
+    
 	<sec:authorize access="isAuthenticated()">
 		<form:form action="/logout">
 			<button class="btn btn-info btn-lg">Logout</button>
 		</form:form>
 	</sec:authorize>
-
-	  
+    
+   
+    
+    <nav class="navbar navbar-expand-lg fixed-bottom navbar-light bg-dark">
+  <a class="navbar-brand; btn btn-dark" style = "font-style: italic; font-weight: bold;  font-size: 1.875em;" href="#">LvivRest</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown1" aria-controls="navbarNavDropdown1" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown1">
+             <ul class="navbar-nav">
+            	<sec:authorize access="isAnonymous()">
+            <li class="nav-item active">
+        <a class="nav-link; btn btn-outline-info " href="/registration"><span class="glyphicon glyphicon-user" ></span>Sign Up <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link; btn btn-outline-primary" href="/login"><span class="glyphicon glyphicon-log-in" ></span> Sign In</a>
+        </li>
+            	</sec:authorize>
+              <sec:authorize access="isAuthenticated()">
+                  <li class="nav-item">
+        <a class="nav-link; btn btn-outline-primary" href="/logout"><span class="glyphicon glyphicon-log-in" ></span> Log Out</a>
+            </li>
+            </sec:authorize>
+            </ul>
+        </div>
+</nav>
+   <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 img-fluid" src="http://s.gvult.com/uploads/posts/2016-02/1454579129_12646969_1240982332595940_2366665344260414621_n.png" alt="First slide">
     </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>ДРАТУТІ))0)</p>
-      </div>
-      <div class="well">
-        <p>БЛА_БЛА_БЛА</p>
-      </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 img-fluid" src="http://www.sushiya.ua/modules/pages/files/f56964590e22eed969b3651d41797252.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 img-fluid" src="https://cdn.doordash.com/media/restaurant/cover/ChicagoPizzaPizzeria_Allen_TX.png" alt="Third slide">
     </div>
   </div>
-  
- 
-  
-  
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
+   </div>
+    
+    <div class="d-flex  justify-content-center flex-row">
+  <div class="p-2">Flex item 1</div>
+  <div class="p-2">Flex item 2</div>
+  <div class="p-2">Flex item 3</div>
+</div>
+    
 
-
-
-
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
 
 
 </body>

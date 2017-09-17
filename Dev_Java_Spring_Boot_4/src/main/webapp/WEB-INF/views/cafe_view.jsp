@@ -115,7 +115,7 @@
 							<td>${cafe.open}</td>
 							<td>${cafe.close}</td>
 							<td>
-							<c:forEach var="meal" items="${cafe.meals.context}">
+							<c:forEach var="meal" items="${cafe.meals}">
 							${meal} 
 								</c:forEach>
 								</td>
@@ -156,11 +156,7 @@
 				</table>
 			</div>
 	</div>
-	<div class="row">
-				<div class="col-12 text-center">
-					<custom:pageable page="${cafes}"/>
-				</div>
-			</div>
+	
 	</div>
 </body>
 </html>

@@ -8,8 +8,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ua.entity.Cuisine;
-import ua.entity.Ingredient;
 import ua.entity.Meal;
 import ua.model.request.MealRequest;
 import ua.model.view.MealView;
